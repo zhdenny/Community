@@ -97,11 +97,11 @@ install:
       echo ""
       echo "=========================="
       echo ""
-      echo "Cloudbox Branch: $CB_BRANCH"
+      echo "Cloudbox Branch: appveyor"
       echo ""
       cd ${CLOUDBOX_PATH}
       rm settings.yml accounts.yml adv_settings.yml
-      git checkout $CB_BRANCH
+      git checkout appveyor
       sudo ansible-playbook cloudbox.yml --syntax-check
       sudo ansible-playbook cloudbox.yml --tags core \
           --skip-tags sanity_check,settings \
